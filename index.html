@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa | Gaming & PC Hardware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER / ENCABEZADO -->
+    <header class="header">
+        <div class="logo">
+            <h1><a href="index.html">NEXA</a></h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="./Pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <!-- Aquí irá el ícono del carrito con JS -->
+            <button id="btn-carrito">carrito</button>
+        </div>
+    </header>
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <!-- Imagen de fondo local -->
+    <img src="../assets/img/heronew.jpg" alt="Setup gamer de fondo" class="hero-bg-image">
+    
+    <div class="hero-content">
+        <h1>Potenciá tu forma de jugar</h1>
+        <p>Encuentra el mejor hardware, periféricos y PCs armadas para gamers exigentes.</p>
+        <a href="#productos" class="btn-primary">Ver Productos</a>
+    </div>
+</section>
+<!-- Sección de Productos-->
+<section class="products-section" id="productos">
+    <div class="products-container">
+    <div class="product-header">
+                    <h2 class="section-title">Conocé nuestros <span>productos destacados</span></h2>
+                    <p class="product-subtitle">Potenciá tu nivel competitivo con el hardware y los periféricos elegidos por los pros.</p>
+                </div>
+        
+        <div class="products-grid">
+            
+            <!-- Producto 1: Teclado -->
+            <div class="product-card">
+                <img src="/assets/img/teclado_mecanico_40809.jpg" alt="Teclado Mecánico K65 RGB MINI" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">PERIFÉRICOS</span>
+                    <h3>Teclado Mecanico Corsair K65 MINI Swtich Cherry MX Speed Black RGB ICUE 60% USB-C</h3>
+                    <p>Switches ópticos y retroiluminación personalizable.</p>
+                </div>
+                <div class="product-footer-card">
+                    <span class="product-price">$ 110.990</span>
+                    <button class="btn-primary-cart">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Producto 2: Mouse -->
+            <div class="product-card">
+                <img src="/assets/img/logitech_ G903_ Wireless.jpg" alt="Mouse Inalámbrico NexaStorm" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">PERIFÉRICOS</span>
+                    <h3>Mouse Logitech G903 Wireless 2.4Ghz Lightspeed 1ms Hero 25K 110g 24Hs</h3>
+                    <p>Sensor de alta precisión de 25K DPI ultraliviano.</p>
+                </div>
+                <div class="product-footer-card">
+                    <span class="product-price">$ 134.990</span>
+                    <button class="btn-primary-cart">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+            <!-- Producto 3: Auriculares -->
+            <div class="product-card">
+                <img src="/assets/img/auricular_Hyperx Cloud Stinger2.jpg" alt="Auriculares Hyperx Cloud Stinger 2 Wireless" class="product-image">
+                <div class="product-info">
+                    <span class="product-category">AUDIO</span>
+                    <h3>Auriculares Hyperx Cloud Stinger 2 Wireless 2.4Ghz DTS X Sound Black 20Hs</h3>
+                    <p>Sonido envolvente inmersivo y micrófono con cancelación.</p>
+                </div>
+                <div class="product-footer-card">
+                    <span class="product-price">$ 149.990</span>
+                    <button class="btn-primary-cart">🛒 Agregar al carrito</button>
+                </div>
+            </div>
+
+    </div>
+</section>
+        <!-- Sección de Reseñas (Organizada con CSS Grid - 4 reseñas) -->
+        <section class="reviews-section" id="resenas">
+            <div class="reviews-container">
+                <div class="reviews-header">
+                    <h2 class="section-title">Lo que dicen nuestros gamers</h2>
+                    <p class="reviews-subtitle">La opinión de quienes ya elevaron su rendimiento con nuestro equipamiento.</p>
+                </div>
+
+                <div class="reviews-grid">
+                    
+                    <!-- Reseña 1 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "El teclado mecánico RGB Pro superó totalmente mis expectativas. Los switches ópticos son ultra rápidos y la calidad de construcción es de otro nivel."
+                        </p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar de Sofía M.">
+                            <div>
+                                <h4>Sofía Martínez</h4>
+                                <span>Creadora de Contenido</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 2 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Compré el mouse NexaStorm y la precisión se nota desde el primer competitivo. El envío llegó rapidísimo y en perfectas condiciones. Muy recomendable."
+                        </p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Avatar de Lucas G.">
+                            <div>
+                                <h4>Lucas Gómez</h4>
+                                <span>Jugador de Esports</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 3 -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Los auriculares CyberSound 7.1 aíslan el ruido exterior de manera increíble. El sonido envolvente me da una ventaja táctica enorme en las partidas."
+                        </p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Avatar de Mateo R.">
+                            <div>
+                                <h4>Mateo Ramírez</h4>
+                                <span>Gamer Entusiasta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 4 (Nueva) -->
+                    <div class="review-card">
+                        <div class="review-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "La silla ergonómica Apex cambió por completo mis transmisiones. Puedo pasar horas jugando o editando sin sentir la más mínima molestia en la espalda."
+                        </p>
+                        <div class="review-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Avatar de Valentina S.">
+                            <div>
+                                <h4>Valentina Silva</h4>
+                                <span>Streamer Profesional</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+</main>
+<!-- Footer / Pie de Página (Estructura Corregida) -->
+        <footer class="footer">
+            <!-- Este contenedor envuelve TODO para forzar el ancho y centrado -->
+            <div class="footer-content-wrapper">
+                
+                <!-- Contenedor de las 4 columnas superiores -->
+                <div class="footer-container">
+                    
+                    <!-- Columna 1: Marca y Redes -->
+                    <div class="footer-col brand-col">
+                        <h2 class="footer-logo">Nexa<span>Gear</span></h2>
+                        <p class="footer-desc">
+                            Equipamiento y tecnología de alto rendimiento para gamers, creadores y profesionales exigentes.
+                        </p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2: Navegación -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">Navegación</h4>
+                        <ul class="footer-links">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#productos">Productos</a></li>
+                            <li><a href="../Pages/contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Contacto -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">Contacto</h4>
+                        <ul class="footer-contact-list">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Av. Tecnológica 1450, Piso 4, Of. 402</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+54 (11) 4567-8900</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>soporte@nexagear.com</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Lun - Vie: 9:00 - 18:00</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 4: Legal / Ayuda -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">Legal y Ayuda</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Centro de Ayuda</a></li>
+                            <li><a href="#">Garantías y Devoluciones</a></li>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                        </ul>
+                    </div>
+
+                </div> <!-- Fin de footer-container -->
+
+                <!-- Barra inferior de derechos (AHORA DENTRO DEL WRAPPER) -->
+                <div class="footer-bottom">
+                    <p>2026 NexaGear. Todos los derechos reservados.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacidad</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+
+            </div> <!-- Fin de footer-content-wrapper -->
+        </footer>
+      
+</html>
