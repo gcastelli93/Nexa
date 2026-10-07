@@ -1,4 +1,6 @@
-/* 1. RESET GLOBAL */
+/* ==========================================================
+   1. RESET GLOBAL Y VARIABLES
+   ========================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +9,12 @@
 
 :root {
     /* Fondos oscuros */
-    --bg-main: #050509;       
-    --bg-header: #0e0e16;     
-    --bg-card: #13131f;      
+    --bg-main: #050509;        
+    --bg-header: #0e0e16;    
+    --bg-card: #13131f;       
     
     /* Textos */
-    --text-main: #ffffff;     
+    --text-main: #ffffff;    
     --text-muted: #94a3b8;    
     
     /* Bordes y líneas sutiles */
@@ -36,95 +38,79 @@ body {
     background-color: var(--bg-main);
 }
 
-/* Aplicar la fuente de Títulos a todos los encabezados principales */
 h1, h2, h3, h4, h5, h6, 
-.section-title, 
-.footer-title {
+.section-title{
     font-family: var(--font-heading);
     letter-spacing: -0.02em; 
 }
 
-/* Aplicar la fuente futurista exclusivamente al Logotipo*/
-.logo, .footer-logo {
-    font-family: var(--font-logo);
-    letter-spacing: 0.05rem;
-    font-weight: 900;
-}
-
-/* ESTILOS DEL BOTÓN PRINCIPAL */
-.btn-primary {
-    display: inline-block; 
-    background-color: var(--color-primary); 
-    color: var(--text-main); 
-    padding: 12px 28px;
-    border-radius: 6px; 
-    text-decoration: none; 
-    font-weight: 650;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-hover); 
-    transform: translateY(-2px); 
-}
-
 /* 2. ESTILOS DEL HEADER */
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 5rem;
     background-color: var(--bg-header);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 0.125rem solid var(--border-color);
 }
 
-/* 3. ESTILOS DE LA NAVEGACIÓN */
-.nav ul {
-    list-style: none; 
-    display: flex;
-    gap: 30px; 
+.header-logo img {
+    height: 2rem;
+    width: auto;
 }
 
-.nav a {
-    text-decoration: none; 
-    color: var(--text-muted); 
-    transition: color 0.3s ease; 
-}
-
-.nav a:hover {
-    color: var(--color-primary); 
-}
-
-/* ESTILOS DEL BOTÓN DE CARRITO */
-#btn-carrito {
-    background-color: var(--color-primary); 
-    color: var(--bg-main); 
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px; 
-    font-weight: bold;
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-
-/* Efecto hover para el botón del carrito */
-#btn-carrito:hover {
-    background-color: var(--color-hover); 
-}
-
-/* ESTILOS DE LA SECCIÓN HERO*/
-.hero {
-    position: relative;
+.header-right {
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
-    padding: 10rem 5rem;
-    overflow: hidden; 
-    border-bottom: 0.0625rem solid var(--border-color); 
-    min-height: 38rem; 
+    gap: 2.5rem; 
 }
 
-/* Imagen de fondo local */
+.header-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: var(--text-main);
+}
+
+.btn-cart {
+    background-color: var(--color-primary);
+    color: var(--text-main);
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cart:hover {
+    background-color: #7c3aed;
+    transform: translateY(-0.0625rem);
+}
+
+/* 3. ESTILOS DE LA SECCIÓN HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    min-height: 31.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--bg-main);
+}
+
 .hero-bg-image {
     position: absolute;
     top: 0;
@@ -132,11 +118,10 @@ h1, h2, h3, h4, h5, h6,
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     z-index: 1;
+    filter: brightness(0.4);
 }
 
-/* Capa de degradado oscuro para contraste */
 .hero::after {
     content: '';
     position: absolute;
@@ -144,37 +129,155 @@ h1, h2, h3, h4, h5, h6,
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(10, 10, 10, 0.96) 45%, rgba(10, 10, 10, 0.5));
+    background: radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
+                radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 50rem;
+    padding: 0 1.25rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1.25rem;
+    text-shadow: 0 0 1.5625rem rgba(139, 92, 246, 0.5), 0 0 3.125rem rgba(139, 92, 246, 0.2);
+    letter-spacing: -0.0312rem;
+}
+
+.hero-content p {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2.1875rem;
+    line-height: 1.6;
+    text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.8);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.875rem 2.25rem;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-decoration: none;
+    background-color: var(--color-primary);
+    border-radius: 0.5rem;
+    border: 0.0625rem solid var(--border-color);
+    box-shadow: 0 0 1.25rem rgba(139, 92, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-0.125rem);
+    background-color: var(--color-hover);
+    box-shadow: 0 0 1.875rem rgba(167, 139, 250, 0.7), 0 0 0.9375rem rgba(139, 92, 246, 0.5);
+}
+
+/* 4. ESTILOS DE LA SECCIÓN CATEGORÍAS */
+.categories-section {
+    padding: 4.5rem 2.5rem;
+    background-color: var(--bg-main);
+    border-top: 0.0625rem solid var(--border-color);
+}
+
+.categories-container {
+    max-width: 78rem;
+    margin: 0 auto;
+}
+
+.categories-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.categories-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    height: 13.5rem; 
+    display: flex;
+    align-items: flex-end;
+    padding: 1.75rem;
+    text-decoration: none;
+    background-color: var(--bg-card);
+    border: 0.0625rem solid var(--border-color);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.category-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.category-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(5, 5, 9, 0.9) 0%, rgba(5, 5, 9, 0.1) 60%);
     z-index: 2;
 }
 
-/* Contenedor del texto con jerarquía tipográfica adecuada */
-.hero-content {
+.category-content {
     position: relative;
-    z-index: 3; 
-    max-width: 43.75rem; 
-    text-align: left;
+    z-index: 3;
+    width: 100%;
 }
 
-/* Título principal grande y llamativo */
-.hero-content h2 {
-    font-size: 3.25rem; 
-    line-height: 1.15;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 1.25rem;
+.category-content h3 {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    margin: 0;
+    transition: color 0.3s ease;
 }
 
-/* Párrafo descriptivo con buena lectura */
-.hero-content p {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: var(--text-main); 
-    margin-bottom: 2rem;
+.category-card:hover {
+    transform: translateY(-0.375rem);
+    border-color: var(--color-primary);
+    box-shadow: 0 0.9375rem 2.5rem rgba(139, 92, 246, 0.15);
 }
 
-/* ESTILOS DE LAS TARJETAS DE PRODUCTOS */
+.category-card:hover img {
+    transform: scale(1.06);
+}
 
+.category-card:hover h3 {
+    color: var(--color-hover);
+}
+
+/* 5. ESTILOS DE LA SECCIÓN PRODUCTOS */
 .products-section {
     padding: 5rem 2.5rem;
     background-color: var(--bg-main);
@@ -208,9 +311,8 @@ h1, h2, h3, h4, h5, h6,
     margin: 0 auto;
 }
 
-/* Tarjeta individual como contenedor vertical */
 .product-card {
-    background-color: #121216;
+    background-color: var(--bg-card);
     border: 0.0625rem solid var(--border-color);
     border-radius: 1.25rem;
     overflow: hidden;
@@ -226,7 +328,6 @@ h1, h2, h3, h4, h5, h6,
     box-shadow: 0 0.9375rem 2.5rem rgba(139, 92, 246, 0.15);
 }
 
-/* Imagen del producto dentro de la card */
 .product-image {
     width: 100%;
     height: 11rem;
@@ -235,7 +336,6 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 1.25rem;
 }
 
-/* Información textual del producto */
 .product-info {
     display: flex;
     flex-direction: column;
@@ -264,7 +364,6 @@ h1, h2, h3, h4, h5, h6,
     line-height: 1.4;
 }
 
-/* Sección inferior de la tarjeta: Precio y Botón grande */
 .product-footer-card {
     display: flex;
     flex-direction: column; 
@@ -274,18 +373,16 @@ h1, h2, h3, h4, h5, h6,
     margin-top: auto; 
 }
 
-/* Estilo del precio en pesos */
 .product-price {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--text-main);
 }
 
-/* Botón grande de agregar al carrito */
 .btn-primary-cart {
     width: 100%;
     background-color: var(--color-primary);
-    color: #ffffff;
+    color: var(--text-main);
     border: none;
     border-radius: 0.75rem;
     padding: 0.85rem 1rem;
@@ -300,166 +397,100 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .btn-primary-cart:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-hover);
     transform: translateY(-0.125rem);
 }
 
-/* ESTILOS DEL FOOTER */
-.footer {
-   background-color: var(--bg-header)!important;
-    border-top: 0.0625rem solid var(--border-color) !important;
-    color: var(--text-muted);
-    padding: 5rem 2.5rem 2rem 2.5rem; 
-    margin-top: auto; 
+/* 6. ESTILOS DE LA SECCIÓN RESEÑAS */
+.reviews-section {
+    padding: 5rem 2.5rem;
+    background-color: var(--bg-main);
+    border-top: 0.0625rem solid var(--border-color);
 }
 
-/* Contenedor principal unificado para alinear todo el contenido */
-.footer-content-wrapper {
+.reviews-container {
     max-width: 78rem;
     margin: 0 auto;
 }
 
-/* Cuadrícula de 4 columnas*/
-.footer-container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
-    gap: 3rem; 
-    margin-bottom: 4rem; 
+.reviews-header {
+    text-align: left;
+    margin-bottom: 3rem;
 }
 
-/* Columna de Marca */
-.footer-logo {
-    font-size: 1.5rem; 
-    color: var(--text-main); 
-    font-weight: 700;
-    margin-bottom: 1rem; 
+.reviews-header .section-title {
+    margin: 0 0 0.5rem 0;
 }
 
-.footer-logo span {
-    color: var(--color-primary);
-}
-
-.footer-desc {
-    font-size: 0.875rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem; 
-}
-
-/* Redes Sociales */
-.footer-socials {
-    display: flex;
-    gap: 1rem; 
-}
-
-.footer-socials a {
-    width: 2.5rem; 
-    height: 2.5rem;
-    background-color: var(--bg-main);
-    border: 0.0625rem solid var(--border-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-main) !important; 
+.reviews-subtitle {
     font-size: 0.9375rem; 
-    transition: all 0.3s ease;
+    color: var(--text-muted);
 }
 
-.footer-socials a:hover {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--text-main) !important; 
-    transform: translateY(-0.1875rem); 
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; 
+    max-width: 78rem;
+    margin: 0 auto;
 }
 
-/* Títulos de columnas */
-.footer-title {
-    font-size: 1.05rem; 
-    color: var(--text-main) !important;
-    font-weight: 650;
-    margin-bottom: 1.25rem; 
-}
-
-/* Listas de Enlaces */
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.review-card {
+    background-color: var(--bg-card);
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 1rem; 
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem; 
+    justify-content: space-between;
 }
 
-.footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
+.review-stars {
+    display: flex;
+    gap: 0.25rem;
+    color: var(--color-star); 
     font-size: 0.875rem; 
-    transition: color 0.2s ease;
+    margin-bottom: 1.25rem;
 }
 
-.footer-links a:hover {
-    color: var(--color-primary);
-    padding-left: 0.25rem; 
-}
-
-/* Lista de Contacto */
-.footer-contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem; 
-}
-
-.footer-contact-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem; 
-    font-size: 0.875rem; 
+.review-text {
+    font-size: 0.9375rem; 
     color: var(--text-muted);
-    line-height: 1.4;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
 }
 
-.footer-contact-list li i {
-    color: var(--color-primary) !important; 
-    font-size: 1rem;
-    margin-top: 0.125rem; 
-    flex-shrink: 0;
-}
-
-/* Barra inferior del footer */
-.footer-bottom {
-    width: 100%; 
-    padding-top: 2rem; 
-    border-top: 0.0625rem solid var(--border-color); 
+.review-author {
     display: flex;
-    justify-content: space-between; 
     align-items: center;
-    font-size: 0.8125rem; 
-    box-sizing: border-box;
+    gap: 1rem;
+    border-top: 0.0625rem solid var(--border-color);
+    padding-top: 1.25rem;
+    margin-top: auto;
 }
 
-.footer-bottom p {
-    margin: 0; 
+.review-author img {
+    width: 3rem; 
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.125rem solid var(--color-primary);
 }
 
-.footer-bottom-links {
-    display: flex;
-    gap: 1.5rem;
+.review-author h4 {
+    font-size: 0.9375rem; 
+    color: var(--text-main);
+    font-weight: 650;
+    margin: 0 0 0.125rem 0;
 }
 
-.footer-bottom-links a {
+.review-author span {
+    font-size: 0.75rem; 
     color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
 }
 
-.footer-bottom-links a:hover {
-    color: var(--text-main) !important;
-}
-
-/* 9. ESTILOS DE LA SECCIÓN DE CONTACTO */
+/* 7. ESTILOS DE LA SECCIÓN CONTACTO */
 .contact-section {
     padding: 5rem 2.5rem;
     background-color: var(--bg-main);
@@ -540,7 +571,6 @@ h1, h2, h3, h4, h5, h6,
     min-height: 7.5rem; 
 }
 
-/* Botón de envío estilizado */
 .btn-submit {
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
@@ -564,139 +594,166 @@ h1, h2, h3, h4, h5, h6,
     transform: translateY(-0.125rem);
 }
 
-/* ===== 10. ESTILOS DE LA SECCIÓN DE RESEÑAS (GRID DE 3 TARJETAS) ===== */
-.reviews-section {
-    padding: 5rem 2.5rem;
-    background-color: var(--bg-main);
-    border-top: 0.0625rem solid var(--border-color);
+/* 8. ESTILOS DEL FOOTER */
+.footer {
+    background-color: var(--bg-header) !important;
+    border-top: 0.0625rem solid var(--border-color) !important;
+    color: var(--text-muted);
+    padding: 5rem 2.5rem 2rem 2.5rem; 
+    margin-top: auto; 
 }
 
-.reviews-container {
+.footer-content-wrapper {
     max-width: 78rem;
     margin: 0 auto;
 }
 
-.reviews-header {
-    text-align: left;
-    margin-bottom: 3rem;
-}
-
-.reviews-header .section-title {
-    margin: 0 0 0.5rem 0;
-}
-
-.reviews-subtitle {
-    font-size: 0.9375rem; 
-    color: var(--text-muted);
-}
-
-/* Distribución lógica en CSS Grid de 3 columnas */
-.reviews-grid {
+.footer-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem; 
-    max-width: 78rem;
-    margin: 0 auto;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+    gap: 3rem; 
+    margin-bottom: 4rem; 
 }
 
-/* Tarjeta individual de reseña */
-.review-card {
-    background-color: var(--bg-card);
-    border: 0.0625rem solid var(--border-color);
-    border-radius: 1rem; 
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.footer-col .footer-logo img {
+    height: 2rem; 
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem; 
 }
 
-/* Estrellas de valoración */
-.review-stars {
-    display: flex;
-    gap: 0.25rem;
-    color: var(--color-star); 
-    font-size: 0.875rem; 
-    margin-bottom: 1.25rem;
-}
-
-/* Texto de la opinión */
-.review-text {
-    font-size: 0.9375rem; 
-    color: var(--text-muted);
+.footer-desc {
+    font-size: 0.875rem;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
-    font-style: italic;
+    margin-bottom: 1.5rem; 
 }
 
-/* Autor de la reseña */
-.review-author {
+.footer-socials {
+    display: flex;
+    gap: 1rem; 
+}
+
+.footer-socials a {
+    width: 2.5rem; 
+    height: 2.5rem;
+    background-color: var(--bg-main);
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    border-top: 0.0625rem solid var(--border-color);
-    padding-top: 1.25rem;
-    margin-top: auto;
-}
-
-.review-author img {
-    width: 3rem; 
-    height: 3rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 0.125rem solid var(--color-primary);
-}
-
-.review-author h4 {
+    justify-content: center;
+    color: var(--text-main) !important; 
     font-size: 0.9375rem; 
-    color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-0.1875rem); 
+}
+
+.footer-title {
+    font-size: 1.05rem; 
+    color: var(--text-main) !important;
     font-weight: 650;
-    margin: 0 0 0.125rem 0;
+    margin-bottom: 1.25rem; 
 }
 
-.review-author span {
-    font-size: 0.75rem; 
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+}
+
+.footer-links a {
     color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.875rem; 
+    transition: color 0.2s ease;
 }
 
-/* ==========================================================
-   SISTEMA DE MEDIA QUERIES RESPONSIVAS (PROGRESIVO)
-   ========================================================== */
+.footer-links a:hover {
+    color: var(--color-primary);
+    padding-left: 0.25rem; 
+}
 
-/* 1. PANTALLAS MEDIANAS / TABLETS GRANDES (Ancho máximo: 75rem / 1200px) */
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem; 
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem; 
+    font-size: 0.875rem; 
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.footer-contact-list li i {
+    color: var(--color-primary) !important; 
+    font-size: 1rem;
+    margin-top: 0.125rem; 
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    width: 100%; 
+    padding-top: 2rem; 
+    border-top: 0.0625rem solid var(--border-color); 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 0.8125rem; 
+}
+
+.footer-bottom p {
+    margin: 0; 
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--text-main) !important;
+}
+
+/* 9. MEDIA QUERIES RESPONSIVAS */
 @media (max-width: 75rem) {
-    
-    /* Productos: bajan de 3 a 2 columnas */
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /*categorias*/
-    .categories-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Reseñas: 4 tarjetas pasan exactamente a formato 2x2 simétrico */
+    .products-grid,
+    .categories-grid,
     .reviews-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
     }
 
-    /* Footer: pasa de 4 a 2 columnas */
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
     }
 }
 
-
-/* 2. TABLETS PEQUEÑAS / MÓVILES GRANDES (Ancho máximo: 48rem / 768px) */
 @media (max-width: 48rem) {
-
-    /* Espaciados internos generales para que no rocen los bordes */
     .products-section,
-    .benefits-section,
     .reviews-section,
-    .contact-section {
+    .contact-section,
+    .categories-section {
         padding: 3rem 1.5rem;
     }
 
@@ -705,47 +762,30 @@ h1, h2, h3, h4, h5, h6,
         min-height: 25rem;
     }
 
-    .hero-content h2 {
-        font-size: 2.25rem;
-    }
-
     .section-title {
         font-size: 1.875rem;
     }
 
-    /* Formulario de contacto se ajusta al ancho de pantalla */
     .contact-container {
         max-width: 100%;
         padding: 2rem 1.5rem;
     }
 }
 
-
-/* 3. TELÉFONOS MÓVILES (Ancho máximo: 40rem / 640px) */
 @media (max-width: 40rem) {
-
-    /* Header se apila verticalmente */
     .header {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
     }
 
-    .nav ul {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Todo el sitio pasa a una sola columna vertical fluida */
     .products-grid,
-    .benefits-container,
     .reviews-grid,
-    .footer-container {
+    .footer-container,
+    .categories-grid {
         grid-template-columns: 1fr;
     }
 
-    /* Tarjetas de productos se apilan en vertical (imagen arriba, texto abajo) */
     .product-card {
         flex-direction: column;
         text-align: center;
@@ -754,7 +794,6 @@ h1, h2, h3, h4, h5, h6,
     
     .product-image {
         width: 100%;
-        flex: unset;
         height: 11rem;
     }
 
@@ -767,28 +806,12 @@ h1, h2, h3, h4, h5, h6,
         justify-content: space-between;
     }
 
-    /*categorias*/
-
-     .categories-section {
-        padding: 4rem 1.25rem;
-    }
-
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-
     .category-card {
-        height: 15rem; /* Un poco más compactas en móviles */
+        height: 13rem;
     }
 
-    /* Footer y barra inferior centrados y en columna */
     .footer {
         padding: 3rem 1.25rem 1.5rem 1.25rem;
-    }
-
-    .footer-container {
-        gap: 2rem;
-        margin-bottom: 2.5rem;
     }
 
     .footer-bottom {
@@ -800,12 +823,5 @@ h1, h2, h3, h4, h5, h6,
     .footer-bottom-links {
         justify-content: center;
     }
-
-    /* Contenedor de contacto compacto para celulares */
-    .contact-container {
-        padding: 1.5rem 1rem;
-    }
 }
-
-
 

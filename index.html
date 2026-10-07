@@ -7,38 +7,35 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-    <!-- 1. HEADER / ENCABEZADO -->
+<!-- 1. HEADER / ENCABEZADO -->
     <header class="header">
-        <div class="logo">
-            <h1><a href="index.html">NEXA</a></h1>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="./Pages/contacto.html">Contacto</a></li>
-            </ul>
+    <a href="#" class="header-logo">
+        <img src="./assets/img/NexaFooterLogo.svg" alt="Nexa - Logo">
+    </a>
+    <div class="header-right">
+        <nav class="header-nav">
+            <a href="./index.html">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#resenas">Reseñas</a>
+            <a href="./Pages/contacto.html">Contacto</a>
         </nav>
-        <div class="cart-icon">
-            <!-- Aquí irá el ícono del carrito con JS -->
-            <button id="btn-carrito">carrito</button>
-        </div>
-    </header>
+        <a href="./pages/carrito.html" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
+    </div>
+</header>
 <!-- CONTENIDO PRINCIPAL -->
 <main>
 <!-- HERO -->
 <section class="hero" id="inicio">
     <!-- Imagen de fondo local -->
-    <img src="../assets/img/heronew.jpg" alt="Setup gamer de fondo" class="hero-bg-image">
+    <img src="./assets/img/herobanner.jpg" alt="Setup gamer de fondo" class="hero-bg-image">
     
     <div class="hero-content">
         <h1>Potenciá tu forma de jugar</h1>
-        <p>Encuentra el mejor hardware, periféricos y PCs armadas para gamers exigentes.</p>
+        <p>Encontrá el mejor hardware, periféricos y PCs armadas para gamers exigentes.</p>
         <a href="#productos" class="btn-primary">Ver Productos</a>
     </div>
 </section>
@@ -54,7 +51,7 @@
             
             <!-- Producto 1: Teclado -->
             <div class="product-card">
-                <img src="./assets/img/teclado_mecanico_40809.jpg" alt="Teclado Mecánico K65 RGB MINI" class="product-image">
+                <img src="./assets/img/teclado40809.jpg" alt="Teclado Mecánico K65 RGB MINI" class="product-image">
                 <div class="product-info">
                     <span class="product-category">PERIFÉRICOS</span>
                     <h3>Teclado Mecanico Corsair K65 MINI Swtich Cherry MX Speed Black RGB ICUE 60% USB-C</h3>
@@ -68,7 +65,7 @@
 
             <!-- Producto 2: Mouse -->
             <div class="product-card">
-                <img src="./assets/img/logitech_ G903_ Wireless.jpg" alt="Mouse Logitech G903 Wireless" class="product-image">
+                <img src="./assets/img/mouseg903.jpg" alt="Mouse Logitech G903 Wireless" class="product-image">
                 <div class="product-info">
                     <span class="product-category">PERIFÉRICOS</span>
                     <h3>Mouse Logitech G903 Wireless 2.4Ghz Lightspeed 1ms Hero 25K 110g 24Hs</h3>
@@ -82,7 +79,7 @@
 
             <!-- Producto 3: Auriculares -->
             <div class="product-card">
-                <img src="./assets/img/auricular_Hyperx Cloud Stinger2.jpg" alt="Auriculares Hyperx Cloud Stinger 2 Wireless" class="product-image">
+                <img src="./assets/img/auricularhyper.jpg" alt="Auriculares Hyperx Cloud Stinger 2 Wireless" class="product-image">
                 <div class="product-info">
                     <span class="product-category">AUDIO</span>
                     <h3>Auriculares Hyperx Cloud Stinger 2 Wireless 2.4Ghz DTS X Sound Black 20Hs</h3>
@@ -94,117 +91,117 @@
                 </div>
             </div>
 
-    </div>
-</section>
-        <!-- Sección de Reseñas (Organizada con CSS Grid - 4 reseñas) -->
+        </div>
+        </div>
+    </section>
+<!-- RESEÑAS-->
         <section class="reviews-section" id="resenas">
-            <div class="reviews-container">
-                <div class="reviews-header">
-                    <h2 class="section-title">Lo que dicen nuestros gamers</h2>
-                    <p class="reviews-subtitle">La opinión de quienes ya elevaron su rendimiento con nuestro equipamiento.</p>
+    <div class="reviews-container">
+        <div class="reviews-header">
+            <h2 class="section-title">Lo que dicen nuestros gamers</h2>
+            <p class="reviews-subtitle">La opinión de quienes ya elevaron su rendimiento con nuestro equipamiento.</p>
+        </div>
+
+        <div class="reviews-grid">
+            
+            <!-- Reseña 1 -->
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
-
-                <div class="reviews-grid">
-                    
-                    <!-- Reseña 1 -->
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "El teclado mecánico RGB Pro superó totalmente mis expectativas. Los switches ópticos son ultra rápidos y la calidad de construcción es de otro nivel."
-                        </p>
-                        <div class="review-author">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar de Sofía M.">
-                            <div>
-                                <h4>Sofía Martínez</h4>
-                                <span>Creadora de Contenido</span>
-                            </div>
-                        </div>
+                <p class="review-text">
+                    "El Logitech G PRO X Superlight es una locura, pesa nada y la batería dura días enteros jugando sin parar. Lo compré con envío a CABA y llegó en 24 horas impecable. Excelente atención de la tienda."
+                </p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Avatar de Sofía M.">
+                    <div>
+                        <p>Sofía Martínez</p>
+                        <span>Creadora de Contenido</span>
                     </div>
-
-                    <!-- Reseña 2 -->
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "Compré el mouse NexaStorm y la precisión se nota desde el primer competitivo. El envío llegó rapidísimo y en perfectas condiciones. Muy recomendable."
-                        </p>
-                        <div class="review-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Avatar de Lucas G.">
-                            <div>
-                                <h4>Lucas Gómez</h4>
-                                <span>Jugador de Esports</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Reseña 3 -->
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "Los auriculares CyberSound 7.1 aíslan el ruido exterior de manera increíble. El sonido envolvente me da una ventaja táctica enorme en las partidas."
-                        </p>
-                        <div class="review-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Avatar de Mateo R.">
-                            <div>
-                                <h4>Mateo Ramírez</h4>
-                                <span>Gamer Entusiasta</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Reseña 4 (Nueva) -->
-                    <div class="review-card">
-                        <div class="review-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="review-text">
-                            "La silla ergonómica Apex cambió por completo mis transmisiones. Puedo pasar horas jugando o editando sin sentir la más mínima molestia en la espalda."
-                        </p>
-                        <div class="review-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Avatar de Valentina S.">
-                            <div>
-                                <h4>Valentina Silva</h4>
-                                <span>Streamer Profesional</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </section>
+
+            <!-- Reseña 2 -->
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">
+                    "Buscaba algo bueno sin gastar una fortuna y el G203 Lightsync no decepciona. Las luces RGB se configuran súper fácil con el G Hub y el sensor responde excelente para el precio que tiene. Muy conforme."
+                </p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Avatar de Lucas G.">
+                    <div>
+                        <p>Lucas Gómez</p>
+                        <span>Jugador de Esports</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">
+                    "Los Logitech G733 son hiper cómodos, los podés tener puestos horas y ni te pesan en la cabeza. El micrófono se escucha flamante en Discord y la cancelación de ruidos zafa muy bien. ¡Recomendadísimos!"
+                </p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Avatar de Mateo R.">
+                    <div>
+                        <p>Mateo Ramírez</p>
+                        <span>Gamer Entusiasta</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reseña 4 -->
+            <div class="review-card">
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">
+                    "Tenía dudas sobre qué combo elegir para arrancar y los chicos me asesoraron re bien por el chat. Originales, caja sellada y garantía oficial en Argentina. Da gusto comprar así."
+                </p>
+                <div class="review-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Avatar de Valentina S.">
+                    <div>
+                        <p>Valentina Silva</p>
+                        <span>Streamer Profesional</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 </main>
-<!-- Footer / Pie de Página (Estructura Corregida) -->
+<!-- Footer -->
         <footer class="footer">
-            <!-- Este contenedor envuelve TODO para forzar el ancho y centrado -->
             <div class="footer-content-wrapper">
-                
-                <!-- Contenedor de las 4 columnas superiores -->
                 <div class="footer-container">
                     
                     <!-- Columna 1: Marca y Redes -->
                     <div class="footer-col brand-col">
-                        <h2 class="footer-logo">Nexa<span>Gear</span></h2>
+                        <a href="#" class="footer-logo">
+                            <img src="./assets/img/NexaFooterLogo.svg" alt="NexaGear - Logo">
+                        </a>
                         <p class="footer-desc">
                             Equipamiento y tecnología de alto rendimiento para gamers, creadores y profesionales exigentes.
                         </p>
@@ -218,7 +215,7 @@
 
                     <!-- Columna 2: Navegación -->
                     <div class="footer-col">
-                        <h4 class="footer-title">Navegación</h4>
+                        <h2 class="footer-title">Navegación</h2>
                         <ul class="footer-links">
                             <li><a href="#inicio">Inicio</a></li>
                             <li><a href="#productos">Productos</a></li>
@@ -228,7 +225,7 @@
 
                     <!-- Columna 3: Contacto -->
                     <div class="footer-col">
-                        <h4 class="footer-title">Contacto</h4>
+                        <h2 class="footer-title">Contacto</h2>
                         <ul class="footer-contact-list">
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -251,7 +248,7 @@
 
                     <!-- Columna 4: Legal / Ayuda -->
                     <div class="footer-col">
-                        <h4 class="footer-title">Legal y Ayuda</h4>
+                        <h2 class="footer-title">Legal y Ayuda</h2>
                         <ul class="footer-links">
                             <li><a href="#">Centro de Ayuda</a></li>
                             <li><a href="#">Garantías y Devoluciones</a></li>
@@ -262,9 +259,9 @@
 
                 </div> <!-- Fin de footer-container -->
 
-                <!-- Barra inferior de derechos (AHORA DENTRO DEL WRAPPER) -->
+                <!-- Barra inferior de derechos -->
                 <div class="footer-bottom">
-                    <p>2026 NexaGear. Todos los derechos reservados.</p>
+                    <p>2026 Nexa. Todos los derechos reservados.</p>
                     <div class="footer-bottom-links">
                         <a href="#">Privacidad</a>
                         <a href="#">Cookies</a>

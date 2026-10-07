@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexaGear | Gaming & PC Hardware</title>
-    <!-- Google Fonts: Orbitron, Plus Jakarta Sans & Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Enlace a tus estilos CSS -->
+    <!-- Enlace a estilos CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-    <!-- 1. HEADER / ENCABEZADO -->
+<!-- 1. HEADER / ENCABEZADO -->
     <header class="header">
-        <div class="logo">
-            <h1><a href="../index.html">NEXA</a></h1>
-        </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
+    <!-- Logo a la izquierda -->
+    <a href="../index.html" class="header-logo">
+        <img src="../assets/img/NexaFooterLogo.svg" alt="Nexa - Logo">
+    </a>
+
+    <!-- Grupo derecho: Navegación + Botón de Carrito -->
+    <div class="header-right">
+        <nav class="header-nav">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#productos">Productos</a>
+            <a href="../index.html#resenas">Reseñas</a>
+            <a href="./contacto.html">Contacto</a>
         </nav>
-        <div class="cart-icon">
-            <!-- Aquí irá el ícono del carrito con JS -->
-            <button id="btn-carrito">carrito</button>
-        </div>
-    </header>
+        <a href="../pages/carrito.html" class="btn-cart"><i class="fa-solid fa-cart-shopping"></i> Carrito
+</a>
+    </div>
+</header>
 <!-- 2. CONTENIDO PRINCIPAL -->
 <main>
 <!-- Sección de Contacto -->
         <section class="contact-section" id="contacto">
             <div class="contact-container">
                 <div class="contact-header">
-                    <h2 class="section-title">Ponte en Contacto</h2>
+                    <h1 class="section-title">Ponte en Contacto</h1>
                     <p class="contact-subtitle">¿Tienes dudas sobre algún equipo o necesitas soporte técnico especializado? Escríbenos.</p>
                 </div>
 
@@ -68,17 +68,16 @@
             </div>
         </section>
 </main>
-<!-- Footer / Pie de Página (Estructura Corregida) -->
+<!-- Footer -->
         <footer class="footer">
-            <!-- Este contenedor envuelve TODO para forzar el ancho y centrado -->
             <div class="footer-content-wrapper">
-                
-                <!-- Contenedor de las 4 columnas superiores -->
                 <div class="footer-container">
                     
                     <!-- Columna 1: Marca y Redes -->
                     <div class="footer-col brand-col">
-                        <h2 class="footer-logo">Nexa<span>Gear</span></h2>
+                        <a href="#" class="footer-logo">
+                            <img src="./assets/img/NexaFooterLogo.svg" alt="NexaGear - Logo">
+                        </a>
                         <p class="footer-desc">
                             Equipamiento y tecnología de alto rendimiento para gamers, creadores y profesionales exigentes.
                         </p>
@@ -92,17 +91,17 @@
 
                     <!-- Columna 2: Navegación -->
                     <div class="footer-col">
-                        <h4 class="footer-title">Navegación</h4>
+                        <h2 class="footer-title">Navegación</h2>
                         <ul class="footer-links">
                             <li><a href="#inicio">Inicio</a></li>
                             <li><a href="#productos">Productos</a></li>
-                            <li><a href="#beneficios">Beneficios</a></li>
+                            <li><a href="../Pages/contacto.html">Contacto</a></li>
                         </ul>
                     </div>
 
                     <!-- Columna 3: Contacto -->
                     <div class="footer-col">
-                        <h4 class="footer-title">Contacto</h4>
+                        <h2 class="footer-title">Contacto</h2>
                         <ul class="footer-contact-list">
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -125,7 +124,7 @@
 
                     <!-- Columna 4: Legal / Ayuda -->
                     <div class="footer-col">
-                        <h4 class="footer-title">Legal y Ayuda</h4>
+                        <h2 class="footer-title">Legal y Ayuda</h2>
                         <ul class="footer-links">
                             <li><a href="#">Centro de Ayuda</a></li>
                             <li><a href="#">Garantías y Devoluciones</a></li>
@@ -138,7 +137,7 @@
 
                 <!-- Barra inferior de derechos -->
                 <div class="footer-bottom">
-                    <p>2026 NexaGear. Todos los derechos reservados.</p>
+                    <p>2026 Nexa. Todos los derechos reservados.</p>
                     <div class="footer-bottom-links">
                         <a href="#">Privacidad</a>
                         <a href="#">Cookies</a>
